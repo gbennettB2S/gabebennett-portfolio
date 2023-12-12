@@ -1,0 +1,107 @@
+$large-bp: 74.938rem; /* 1199px */
+$small-bp: 36.188rem; /* 579px */
+$smaller-bp: 30rem; /* 480px */
+
+.my-portrait {
+    max-width: 21.25rem;
+    margin-top: 1.25rem;
+    border-radius: 10.625rem;
+
+    @media (max-width: $large-bp) {
+        max-width: 6.25rem;
+        max-height: 6.25rem;
+    }
+
+    @media (max-width: $small-bp){
+        max-width: 3.75rem;
+        max-height: 3.75rem;
+    }
+}
+
+.title-block {
+    @media (max-width: $large-bp) {
+        margin-top: 1.875rem;
+    }
+
+    @media (max-width: $small-bp) {
+         margin-top: 1.25rem;
+         margin-left: -0.5rem;
+    }
+
+    @media (max-width: $smaller-bp) {
+        margin-left: 1rem;
+        padding-left: 0.5rem;
+        max-width: 14.688rem;
+    }
+
+    .my-name {
+        @media (max-width: $large-bp) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: $small-bp) {
+            font-size: 2rem;
+        }
+    }
+
+    .my-title {
+        @media (max-width: $large-bp) {
+            font-size: 1.313rem;
+        }
+
+        @media (max-width: $small-bp) {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.skills-tech {
+    margin: 0.3rem 1.5rem 1.25rem -2.375rem;
+    max-width: 28.75rem;
+
+    @media (max-width: $large-bp) {
+        display: none;
+    }
+}
+
+.socials-desktop {
+    @media (max-width: $large-bp) {
+        display: none;
+    }
+}
+
+.socials-tablet {
+    float: right;
+    margin-top: 1rem;
+
+    @media (min-width: $large-bp) {
+        display: none;
+    }
+
+    @media (max-width: $small-bp) {
+        display: none;
+    }
+}
+
+.lineBox {
+    background-color: #000;
+    margin-bottom: 0.75rem;
+}
+
+.linkedin {
+    margin-top: 0.05rem;
+    margin-right: 0.75rem;
+    opacity: 0.7;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.github {
+    opacity: 0.7;
+
+    &:hover {
+        opacity: 1;
+    }
+}

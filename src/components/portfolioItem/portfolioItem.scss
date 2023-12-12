@@ -1,0 +1,30 @@
+.portfolio-image {
+    max-height: 450px;
+    max-width: 100%;
+}
+
+.spinner-container {
+    display: flex;
+    height: 100vh !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.uk-slidenav {
+    color: #aaa;
+}
+
+.uk-slideshow-items,
+.uk-slidenav-position {
+    min-height: 450px;
+}
+
+.swipe {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem,
+}
+
+.uk-slideshow-items > * {
+    top: auto;
+    bottom: 0;
+}
