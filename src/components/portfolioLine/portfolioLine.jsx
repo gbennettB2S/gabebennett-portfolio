@@ -13,10 +13,11 @@ export const PortfolioLine = () => {
 
     const fetchPortolioItems = () => {
         axios
-            .get(BASE_API_URL + 'portfolio-items')
+            .get(BASE_API_URL + 'portfolio-items?per_page=30')
             .then((res) => {
                 // Sort items based on priority_order
-                res.data?.sort((a, b) => (a.priority_order > b.priority_order ? 1 : -1))
+                // res.data?.sort((a, b) => (a.priority_order > b.priority_order ? 1 : -1))
+                res.data?.sort((a, b) => (a.priority_order - b.priority_order))
                 setPortfolioItems(res.data);
             })
     }
