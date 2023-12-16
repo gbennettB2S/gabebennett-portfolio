@@ -86,6 +86,10 @@ $bp3: 42rem; /* 672px */
                     width: 1.5rem;
                     height: 1.5rem;
                     transform: translate(0.5rem,-50%);
+
+                    @media (max-width: $bp3) {
+                        width: 0;
+                    }
                 }
             }
 
