@@ -17,7 +17,7 @@ export const PortfolioLine = () => {
             .then((res) => {
                 // Sort items based on priority_order
                 res.data?.sort((a, b) => (a.priority_order - b.priority_order))
-                setPortfolioItems(res.data);
+                setPortfolioItems(res.data)
             })
     }
 
@@ -26,11 +26,11 @@ export const PortfolioLine = () => {
     }, [])
 
     const handleClickOpen = () => {
-        setOpen(true);
+        setOpen(true)
       };
 
       const handleClose = () => {
-        setOpen(false);
+        setOpen(false)
       };
 
     return (

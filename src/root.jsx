@@ -10,7 +10,7 @@ import GlobalStyles from '@mui/material/GlobalStyles'
 import StickyBox from 'react-sticky-box'
 
 const Root = () => {
-    const theme = useTheme();
+    const theme = useTheme()
 
     const mainGridSx = {
         mx: 3,

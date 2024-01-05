@@ -31,7 +31,7 @@ export const IntroSidebar = () => {
     }, [])
 
     const handleBioChange = (panel) => (event, newExpanded) => {
-        setIsBioExpanded(newExpanded ? panel : false);
+        setIsBioExpanded(newExpanded ? panel : false)
     };
 
     const expandSx = {
