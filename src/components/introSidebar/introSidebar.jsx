@@ -60,7 +60,7 @@ export const IntroSidebar = () => {
                 <img
                     src={intro.hero_image.guid}
                     alt={intro.hero_image.post_excerpt}
-                    className="my-portrait"
+                    className={`my-portrait ${isBioExpanded && "reduce-portrait"}`}
                 />
                 :
                 <Skeleton variant="circular" className="my-portrait" width={340} height={340} sx={{ mt: 2.5 }} />

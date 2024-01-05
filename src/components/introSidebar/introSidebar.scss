@@ -6,6 +6,7 @@ $smaller-bp: 30rem; /* 480px */
     max-width: 21.25rem;
     margin-top: 1.25rem;
     border-radius: 10.625rem;
+    transition: all 0.4s;
 
     @media (max-width: $large-bp) {
         max-width: 6.25rem;
@@ -16,6 +17,11 @@ $smaller-bp: 30rem; /* 480px */
         max-width: 3.75rem;
         max-height: 3.75rem;
     }
+}
+
+.reduce-portrait {
+    transform: scale(0.75);
+    max-width: 10rem;
 }
 
 .title-block {
