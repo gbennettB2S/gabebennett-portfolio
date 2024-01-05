@@ -15,6 +15,7 @@ import '@/components/introSidebar/introSidebar.scss'
 export const IntroSidebar = () => {
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
     const [intro, setIntro] = useState()
     const [isBioExpanded, setIsBioExpanded] = useState(false)
 
@@ -60,7 +61,7 @@ export const IntroSidebar = () => {
                 <img
                     src={intro.hero_image.guid}
                     alt={intro.hero_image.post_excerpt}
-                    className={`my-portrait ${isBioExpanded && "reduce-portrait"}`}
+                    className={`my-portrait ${isBioExpanded && !isTablet && "reduce-portrait"}`}
                 />
                 :
                 <Skeleton variant="circular" className="my-portrait" width={340} height={340} sx={{ mt: 2.5 }} />
