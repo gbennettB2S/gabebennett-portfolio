@@ -14,10 +14,12 @@ export const portfolioTheme = createTheme({
         h1: {
             fontFamily: 'FFF_Tusj',
             fontSize: '3.25rem',
+            fontDisplay: 'swap',
         },
         h2: {
-            fontFamily: 'FFF_Tusj',
+            fontFamily: 'Hoefler Text, Georgia, serif',
             fontSize: '1.75rem',
+            fontDisplay: 'swap',
         },
         h3: {
             fontFamily: 'Hoefler Text, Georgia, serif',

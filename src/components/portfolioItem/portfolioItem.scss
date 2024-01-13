@@ -28,3 +28,8 @@
     top: auto;
     bottom: 0;
 }
+
+.uk-slidenav-previous:hover,
+.uk-slidenav-next:hover {
+    cursor: pointer;
+}

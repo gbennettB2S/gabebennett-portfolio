@@ -45,8 +45,11 @@ export const PortfolioLine = () => {
                             </h3>
                             <div className="body">
                                 <img onClick={() => navigate('/portfolio-piece/' + item.id)}
-                                    src={item.better_featured_image.media_details.sizes.medium.source_url}
-                                    alt={item.better_featured_image.alt_text} />
+                                    src={item.better_featured_image.media_details.sizes.thumbnail.source_url}
+                                    alt={item.better_featured_image.alt_text}
+                                    width={item.better_featured_image.media_details.sizes.thumbnail.width}
+                                    height={item.better_featured_image.media_details.sizes.thumbnail.height}
+                                />
                                 <Typography variant="body2" sx={{ mt: 1.5 }}>{item.short_description}</Typography>
                             </div>
                         </div>

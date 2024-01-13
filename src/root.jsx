@@ -28,7 +28,7 @@ const Root = () => {
                 styles={{
                     body: {
                         backgroundColor: '#1D1D1D',
-                        color: '#ffffff'
+                        color: '#ffffff',
                     },
                 }}
             />

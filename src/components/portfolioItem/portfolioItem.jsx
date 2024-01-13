@@ -77,7 +77,7 @@ export const PortfolioItem = () => {
                     <Grid container spacing={4}>
                         <Grid xs={12} md={6}>
                             {portfolioItem.images.length > 1 ?
-                                <div class="uk-slidenav-position" data-uk-slideshow="ratio: false">
+                                <div className="uk-slidenav-position" data-uk-slideshow="ratio: false">
                                     <ul className="uk-slideshow-items"
                                         style={{ backgroundColor: portfolioItem.enable_white_bg == 1 ? '#fff' : '' }}>
 
@@ -90,7 +90,7 @@ export const PortfolioItem = () => {
                                     </ul>
                                     <div style={{ textAlign: 'center', marginTop: '-1.25rem' }}>
                                         <a className="uk-slidenav uk-slidenav-contrast uk-slidenav-previous uk-position-medium"
-                                            href
+                                            href=""
                                             data-uk-slidenav-previous
                                             data-uk-slideshow-item="previous">
                                         </a>
@@ -98,7 +98,7 @@ export const PortfolioItem = () => {
                                         <span className="swipe">Swipe on Image</span>
 
                                         <a className="uk-slidenav uk-slidenav-contrast uk-slidenav-next uk-position-medium"
-                                            href
+                                            href=""
                                             data-uk-slidenav-next
                                             uk-slideshow-item="next">
                                         </a>

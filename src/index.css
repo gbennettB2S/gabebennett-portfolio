@@ -26,3 +26,11 @@ body {
 .socialIcon {
     mix-blend-mode: screen;
 }
+
+a {
+    color: #ebebeb;
+}
+
+a:visited {
+    color: #ebebeb !important;
+}

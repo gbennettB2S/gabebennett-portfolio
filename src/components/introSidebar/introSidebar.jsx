@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 import { BASE_API_URL } from '@/constants'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import gitHubIcon from '@/images/github-small.png'
-import linkedInIcon from '@/images/linkedin-small.png'
+import gitHubIcon from '@/images/github-small-80.webp'
+import linkedInIcon from '@/images/linkedin-small-80.webp'
 import '@/components/introSidebar/introSidebar.scss'
 
 export const IntroSidebar = () => {
@@ -45,10 +45,10 @@ export const IntroSidebar = () => {
 
     const socials = <>
         <Link to="https://www.linkedin.com/in/hangar18studio/" target="_blank">
-            <img src={linkedInIcon} width="30" alt="LinkedIn logo" className="linkedin" />
+            <img src={linkedInIcon} width="30" height="30" alt="LinkedIn logo" className="linkedin" />
         </Link>
         <Link to="https://github.com/gbennettB2S" target="_blank">
-            <img src={gitHubIcon} width="30" alt="GitHub logo" className="github" />
+            <img src={gitHubIcon} width="30"  height="30" alt="GitHub logo" className="github" />
         </Link>
     </>
 
@@ -59,8 +59,10 @@ export const IntroSidebar = () => {
             <Grid xs={2} sm={3} lg={12}>
             {intro ?
                 <img
-                    src={intro.hero_image.guid}
-                    alt={intro.hero_image.post_excerpt}
+                    src={intro.better_featured_image.media_details.sizes.thumbnail.source_url}
+                    alt={intro.better_featured_image.alt_text}
+                    width={intro.better_featured_image.media_details.sizes.thumbnail.width}
+                    height={intro.better_featured_image.media_details.sizes.thumbnail.height}
                     className={`my-portrait ${isBioExpanded && !isTablet && "reduce-portrait"}`}
                 />
                 :
@@ -74,7 +76,7 @@ export const IntroSidebar = () => {
                         : <Skeleton variant="text" className="my-name" sx={{ fontSize: '4rem', width: '18rem' }} />
                     }
                 </Typography>
-                <Typography variant="h3" className="my-title">
+                <Typography variant="h2" className="my-title">
                     {intro
                         ? intro.subhead
                         : <Skeleton variant="text" className="my-title"
