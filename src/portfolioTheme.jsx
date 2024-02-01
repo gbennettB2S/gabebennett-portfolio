@@ -9,7 +9,7 @@ export const portfolioTheme = createTheme({
     typography: {
         allVariants: {
             fontFamily: 'Hoefler Text, Georgia, serif',
-            color: '#ebebeb'
+            color: '#ebebeb',
         },
         h1: {
             fontFamily: 'FFF_Tusj',
@@ -82,6 +82,7 @@ export const portfolioTheme = createTheme({
                 root: {
                     backgroundColor: '#1D1D1D',
                     color: '#fff',
+                    borderRadius: '1rem',
                 },
             },
         },
@@ -92,6 +93,7 @@ export const portfolioTheme = createTheme({
                     color: '#fff',
                     paddingTop: '0.625rem',
                     paddingBottom: '0.625rem',
+                    paddingRight: '0.625rem',
                 },
             },
         },
@@ -112,7 +114,6 @@ export const portfolioTheme = createTheme({
                 root: {
                     backgroundColor: '#222',
                     color: '#aaa',
-                    paddingRight: '1.5rem',
                 },
             },
         },
@@ -122,7 +123,7 @@ export const portfolioTheme = createTheme({
                     fontFamily: 'Helvetica, arial, sans-serif',
                     color: '#aaa',
                     borderColor: '#666',
-                    borderRadius: '0',
+                    borderRadius: '0.5rem',
                 },
             },
         },

@@ -144,7 +144,7 @@ export const PortfolioItem = () => {
             }
 
             <DialogActions>
-                <Grid container sx={{ mt: 1, width: '100%' }} justifyContent="space-between">
+                <Grid container sx={{ width: '100%' }} justifyContent="space-between">
                     <Grid sx={{ mt: 0.85, ml: 2 }}>
                     {isMedium || !isMobile &&
                         <Typography variant="body2">

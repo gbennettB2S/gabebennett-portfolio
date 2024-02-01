@@ -98,6 +98,7 @@ $bp3: 42rem; /* 672px */
 
                 img {
                     max-width: 20.938rem;
+                    border-radius: 1rem;
 
                     @media (max-width: $bp1) {
                         max-width: 16.25rem;
