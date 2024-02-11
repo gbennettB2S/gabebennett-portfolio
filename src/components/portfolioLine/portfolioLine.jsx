@@ -3,7 +3,6 @@ import CircularProgress from '@mui/material/CircularProgress'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { BASE_API_URL } from '@/constants'
-import axios from 'axios'
 import '@/components/portfolioLine/portfolioLine.scss'
 
 export const PortfolioLine = () => {
@@ -11,18 +10,21 @@ export const PortfolioLine = () => {
     const [open, setOpen] = useState(false)
     const [portfolioItems, setPortfolioItems] = useState()
 
-    const fetchPortolioItems = () => {
-        axios
-            .get(BASE_API_URL + 'portfolio-items?per_page=30')
-            .then((res) => {
+    const fetchPortfolioItems = () => {
+        const url = BASE_API_URL + 'portfolio-items?per_page=30'
+        const options = { method: "GET" }
+
+        fetch(url, options)
+            .then((response) => response.json())
+            .then((data) => {
                 // Sort items based on priority_order
-                res.data?.sort((a, b) => (a.priority_order - b.priority_order))
-                setPortfolioItems(res.data)
+                data?.sort((a, b) => (a.priority_order - b.priority_order))
+                setPortfolioItems(data)
             })
     }
 
     useEffect(() => {
-        fetchPortolioItems()
+        fetchPortfolioItems()
     }, [])
 
     const handleClickOpen = () => {

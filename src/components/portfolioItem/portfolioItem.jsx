@@ -10,7 +10,6 @@ import DialogActions from '@mui/material/DialogActions'
 import Divider from '@mui/material/Divider'
 import { useState, useEffect } from 'react'
 import { BASE_API_URL } from '@/constants'
-import axios from 'axios'
 import CloseIcon from '@mui/icons-material/Close'
 import '@/components/portfolioItem/portfolioItem.scss'
 
@@ -24,16 +23,19 @@ export const PortfolioItem = () => {
     const [dialogMax, setDialogMax] = useState('md')
     const [portfolioItem, setPortfolioItem] = useState()
 
-    const fetchPortolioItem = () => {
-        axios
-            .get(BASE_API_URL + 'portfolio-items/' + itemId + '?_embed=wp:term')
-            .then((res) => {
-                setPortfolioItem(res.data)
+    const fetchPortfolioItem = () => {
+        const url = BASE_API_URL + 'portfolio-items/' + itemId + '?_embed=wp:term'
+        const options = { method: "GET" }
+
+        fetch(url, options)
+            .then((response) => response.json())
+            .then((data) => {
+                setPortfolioItem(data)
             })
     }
 
     useEffect(() => {
-        fetchPortolioItem()
+        fetchPortfolioItem()
     }, [])
 
     useEffect(() => {

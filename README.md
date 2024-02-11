@@ -9,7 +9,7 @@ Wordpress backend. It's built and developed using Vite and packages are
 managed with NPM.
 
 The primary frontend tech is React, React Router, MUI, SCSS, 
-UIkit (for the Slideshow component) and Axios (for API calls).
+UIkit (for the Slideshow component).
 
 I use the Wordpress Pods Framework on my server to construct custom post 
 types that provide the specific portfolio content 

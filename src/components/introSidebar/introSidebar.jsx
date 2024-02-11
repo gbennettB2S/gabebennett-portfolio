@@ -7,7 +7,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Link } from 'react-router-dom'
 import { BASE_API_URL } from '@/constants'
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import gitHubIcon from '@/images/github-small-80.webp'
 import linkedInIcon from '@/images/linkedin-small-80.webp'
 import '@/components/introSidebar/introSidebar.scss'
@@ -20,12 +19,15 @@ export const IntroSidebar = () => {
     const [isBioExpanded, setIsBioExpanded] = useState(false)
 
     const fetchData = () => {
-        axios
-            .get(BASE_API_URL + 'portfolio-intro')
-            .then((res) => {
-                setIntro(res.data[0])
+        const url = BASE_API_URL + 'portfolio-intro'
+        const options = { method: "GET" }
+
+        fetch(url, options)
+            .then((response) => response.json())
+            .then((data) => {
+                setIntro(data[0])
             })
-      }
+    }
 
     useEffect(() => {
         fetchData()
