@@ -1,6 +1,6 @@
 # Gabe Bennett - Portfolio Website
 
-My name is Gabe Bennett, I'm a designer and UI developer. 
+I'm Gabe Bennett, designer and UI developer. 
 This is the codebase for my personal portfolio website, 
 [gabebennett.com](https://gabebennett.com).
 
