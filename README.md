@@ -13,7 +13,7 @@ I use the Wordpress Pods Framework on my server to construct custom post
 types that provide the specific portfolio content 
 (JSON) needed through the Wordpress API endpoints.
 
-Testing auto PR
+Testing auto PR some more.
 
 ### Install and Run
 
